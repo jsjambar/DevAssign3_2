@@ -1,34 +1,38 @@
+using System;
 using MongoDB.Bson;
 
 class Projects {
     int max;
-    public Projects(int max) {
+    Random key;
+    public Projects(int max, Random key) {
         this.max = max;
+        this.key = key;
     }
 
     public void createProjects(){
 
         Database db = new Database();
+        Helpers helper = new Helpers(key);
+        
 
         for(int i=0; i <= max; i++){
-
             Project newProject = new Project();
-            newProject.name = Helpers.generateString(12);
-            newProject.budget = Helpers.generateSalary();
-            newProject.allocatedHours = Helpers.generateNumber(1);
+            newProject.name = helper.getProjectName();
+            newProject.budget = helper.getBudget();
+            newProject.allocatedHours = helper.getHours();
             newProject.address = new BsonDocument
             {
-                {"country", Helpers.generateString(10)},
-                {"city", Helpers.generateString(10)},
-                {"street", Helpers.generateString(20)},
-                {"number", Helpers.generateNumber(1)},
-                {"postalcode", Helpers.generatePC()}    
+                {"country", helper.getCountry()},
+                {"city", helper.getCity()},
+                {"street", helper.getStreet()},
+                {"number", helper.getStreetNr()},
+                {"postalcode", helper.getPC()}    
             };
             newProject.headquarter = new BsonDocument
             {
-                {"name", Helpers.generateString(12)},
-                {"rooms", Helpers.generateNumber(2)},
-                {"rent", Helpers.generateRent()}
+                {"name", helper.getHQ()},
+                {"rooms", helper.getRooms()},
+                {"rent", helper.getRent()}
             };
 
             db.insertProject(newProject);

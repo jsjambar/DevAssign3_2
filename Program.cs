@@ -12,20 +12,26 @@ namespace Assignment2
 {
     class Program
     {
+
         static void Main(string[] args)
         {
+            Random key = new Random(1);
+            string seed = "xd69";
+
             // database object
             Database db = new Database();
-            // employees object - 10000 employees
-            Employees employee = new Employees(10000);
-            // project object - 1000 projects
-            Projects project = new Projects(1000);
+            // employees object - x employees
+            Employees employee = new Employees(10000, key);
+            // project object - x projects
+            Projects project = new Projects(100, key);
             // connect to the database and empty the collections
             db.refresh();
             // Add all random generated employees
-            //employee.createEmployees();
+            employee.createEmployees();
             // Add all random generated projects
             project.createProjects();
+
+            Console.WriteLine("Our seed is: "+seed);
         }
     }
 }
