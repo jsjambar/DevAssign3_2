@@ -10,7 +10,7 @@ class Database
         _database = _client.GetDatabase("assign2");
 
         _database.DropCollectionAsync("employees");
-        //_database.DropCollectionAsync("projects");
+        _database.DropCollectionAsync("projects");
     }
 
     public void insertEmployee(Employee employee)

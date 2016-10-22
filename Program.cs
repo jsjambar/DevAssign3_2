@@ -16,17 +16,16 @@ namespace Assignment2
         {
             // database object
             Database db = new Database();
-            // employees object
-            Employees employee = new Employees(1000);
+            // employees object - 10000 employees
+            Employees employee = new Employees(10000);
+            // project object - 1000 projects
+            Projects project = new Projects(1000);
             // connect to the database and empty the collections
             db.refresh();
-            employee.createEmployees();
-
-            /*Project test2 = new Project();
-            test2.name = "Projectje";
-            test2.budget = 2000;
-            test2.allocatedHours = 13;*/
-            //db.insertProject(test2);
+            // Add all random generated employees
+            //employee.createEmployees();
+            // Add all random generated projects
+            project.createProjects();
         }
     }
 }
