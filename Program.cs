@@ -12,13 +12,12 @@ namespace Assignment2
 {
     class Program
     {
-        protected static IMongoClient _client;
-        protected static IMongoDatabase _database;
-
         static void Main(string[] args)
         {
+            // database object
+            Database db = new Database();
             // connect to the database and empty the collections
-            refresh();
+            db.refresh();
 
             Employee test = new Employee();
             test.bsn = 12345;
@@ -56,29 +55,8 @@ namespace Assignment2
             test2.budget = 2000;
             test2.allocatedHours = 13;*/
 
-            insertEmployee(test);
-            //insertProject(test2);
-        }
-
-        public static void refresh()
-        {
-            _client = new MongoClient();
-            _database = _client.GetDatabase("assign2");
-
-            _database.DropCollectionAsync("employees");
-            //_database.DropCollectionAsync("projects");
-        }
-
-        public static void insertEmployee(Employee employee)
-        {
-            var collection = _database.GetCollection<Employee>("employees");
-            collection.InsertOne(employee);
-        }
-
-        public static void insertProject(Project project)
-        {
-            var collection = _database.GetCollection<Project>("projects");
-            collection.InsertOne(project);
+            db.insertEmployee(test);
+            //db.insertProject(test2);
         }
     }
 }
