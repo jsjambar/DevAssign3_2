@@ -1,0 +1,127 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v1.0",
+    "signature": "61a08f600e4b2f9bed52f2793f71a2b02a400c15"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v1.0": {
+      "hwapp/1.0.0": {
+        "dependencies": {
+          "MongoDB.Driver": "2.4.0-beta1",
+          "MongoDB.Bson": "2.4.0-beta1"
+        },
+        "runtime": {
+          "hwapp.dll": {}
+        }
+      },
+      "MongoDB.Bson/2.4.0-beta1": {
+        "dependencies": {
+          "System.Collections.NonGeneric": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.5/MongoDB.Bson.dll": {}
+        }
+      },
+      "MongoDB.Driver/2.4.0-beta1": {
+        "dependencies": {
+          "MongoDB.Bson": "2.4.0-beta1",
+          "MongoDB.Driver.Core": "2.4.0-beta1"
+        },
+        "runtime": {
+          "lib/netstandard1.5/MongoDB.Driver.dll": {}
+        }
+      },
+      "MongoDB.Driver.Core/2.4.0-beta1": {
+        "dependencies": {
+          "MongoDB.Bson": "2.4.0-beta1",
+          "System.Collections.Specialized": "4.0.1",
+          "System.Diagnostics.TraceSource": "4.0.0",
+          "System.Security.SecureString": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/MongoDB.Driver.Core.dll": {}
+        }
+      },
+      "System.Collections.NonGeneric/4.0.1": {
+        "runtime": {
+          "lib/netstandard1.3/System.Collections.NonGeneric.dll": {}
+        }
+      },
+      "System.Collections.Specialized/4.0.1": {
+        "dependencies": {
+          "System.Collections.NonGeneric": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Collections.Specialized.dll": {}
+        }
+      },
+      "System.Diagnostics.TraceSource/4.0.0": {
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.Diagnostics.TraceSource.dll": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Diagnostics.TraceSource.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.Security.SecureString/4.0.0": {
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.Security.SecureString.dll": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Security.SecureString.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "hwapp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MongoDB.Bson/2.4.0-beta1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZVnPi+gRSrX8QMfXVGPSZmo5CNJL059IeNnZ0GCKE63KKiaJpgQhMU2Lqm7Xj1I+EhBdb/kPv5Y0Hy6dS2nI7w=="
+    },
+    "MongoDB.Driver/2.4.0-beta1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DfH79vnqJPmAXsVQa4QDUIJYdiMNlXIcZ8j5PASdahw1oVURcHZQlDT3XrgFgCwOPYA11DsW9ZYshVmXxZg/zw=="
+    },
+    "MongoDB.Driver.Core/2.4.0-beta1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6TA9uZrk2y4ObTYYgUJIDU7FCy70b2t0gmsZHChQI3HI2WTN+bCUKA3bobvNayQTNpoBCF0H8aL0APtRabdMMg=="
+    },
+    "System.Collections.NonGeneric/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hMxFT2RhhlffyCdKLDXjx8WEC5JfCvNozAZxCablAuFRH74SCV4AgzE8yJCh/73bFnEoZgJ9MJmkjQ0dJmnKqA=="
+    },
+    "System.Collections.Specialized/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/HKQyVP0yH1I0YtK7KJL/28snxHNH/bi+0lgk/+MbURF6ULhAE31MDI+NZDerNWu264YbxklXCCygISgm+HMug=="
+    },
+    "System.Diagnostics.TraceSource/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6WVCczFZKXwpWpzd/iJkYnsmWTSFFiU24Xx/YdHXBcu+nFI/ehTgeqdJQFbtRPzbrO3KtRNjvkhtj4t5/WwWsA=="
+    },
+    "System.Security.SecureString/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sqzq9GD6/b0yqPuMpgIKBuoLf4VKAj8oAfh4kXSzPaN6eoKY3hRi9C5L27uip25qlU+BGPfb0xh2Rmbwc4jFVA=="
+    }
+  }
+}
