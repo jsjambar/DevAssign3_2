@@ -98,5 +98,7 @@
 --reference:/Users/jase/.nuget/packages/System.Xml.XDocument/4.0.11/ref/netstandard1.3/System.Xml.XDocument.dll
 /Users/jase/hwapp/Program.cs
 /Users/jase/hwapp/classes/database.cs
+/Users/jase/hwapp/classes/employees.cs
+/Users/jase/hwapp/classes/helpers.cs
 /Users/jase/hwapp/models/employee.cs
 /Users/jase/hwapp/models/project.cs
