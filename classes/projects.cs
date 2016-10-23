@@ -4,6 +4,8 @@ using MongoDB.Bson;
 class Projects {
     int max;
     Random key;
+    // counter for the id
+    int counter = 1;
     public Projects(int max, Random key) {
         this.max = max;
         this.key = key;
@@ -17,6 +19,7 @@ class Projects {
 
         for(int i=0; i <= max; i++){
             Project newProject = new Project();
+            newProject.proj_id = counter;
             newProject.name = helper.getProjectName();
             newProject.budget = helper.getRandomNr(1000, 6000);
             newProject.allocatedHours = helper.getRandomNr(10,120);
@@ -35,6 +38,7 @@ class Projects {
                 {"rent", helper.getRandomNr(300,1000)}
             };
 
+            counter++;
             db.insertProject(newProject);
         }
     }
