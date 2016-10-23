@@ -31,6 +31,8 @@ namespace Assignment2
             employee.createEmployees();
             // Add all random generated projects
             project.createProjects();
+
+            Console.WriteLine("Seed is: "+seed);
         }
     }
 }
