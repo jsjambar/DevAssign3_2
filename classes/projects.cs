@@ -18,21 +18,21 @@ class Projects {
         for(int i=0; i <= max; i++){
             Project newProject = new Project();
             newProject.name = helper.getProjectName();
-            newProject.budget = helper.getBudget();
-            newProject.allocatedHours = helper.getHours();
+            newProject.budget = helper.getRandomNr(1000, 6000);
+            newProject.allocatedHours = helper.getRandomNr(10,120);
             newProject.address = new BsonDocument
             {
                 {"country", helper.getCountry()},
                 {"city", helper.getCity()},
                 {"street", helper.getStreet()},
-                {"number", helper.getStreetNr()},
+                {"number", helper.getRandomNr(1,30)},
                 {"postalcode", helper.getPC()}    
             };
             newProject.headquarter = new BsonDocument
             {
                 {"name", helper.getHQ()},
-                {"rooms", helper.getRooms()},
-                {"rent", helper.getRent()}
+                {"rooms", helper.getRandomNr(1,10)},
+                {"rent", helper.getRandomNr(300,1000)}
             };
 
             db.insertProject(newProject);

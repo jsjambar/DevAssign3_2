@@ -29,14 +29,14 @@ class Employees
                 {"country", helper.getCountry()},
                 {"city", helper.getCity()},
                 {"street", helper.getStreet()},
-                {"number", helper.getStreetNr()},
+                {"number", helper.getRandomNr(1,30)},
                 {"postalcode", helper.getPC()}    
             };
             newEmployee.positions = new BsonDocument
             {
                 {"name", helper.getPositionName()},
                 {"description", helper.getPositionDescription()},
-                {"salary", helper.getSalary()}
+                {"salary", helper.getRandomNr(2000,6000)}
             };
             newEmployee.degrees = new BsonDocument
             {
@@ -47,18 +47,18 @@ class Employees
             newEmployee.headquarter = new BsonDocument
             {
                 {"name", helper.getHQ()},
-                {"rooms", helper.getRooms()},
-                {"rent", helper.getRent()}
+                {"rooms", helper.getRandomNr(1,10)},
+                {"rent", helper.getRandomNr(300,800)}
             };
             newEmployee.projects = new BsonDocument
             {
-                {"proj_id", helper.getProjectID()},
-                {"budget", helper.getBudget()},
-                {"hours", helper.getHours()},
+                {"proj_id", helper.getRandomNr(1,100)},
+                {"budget", helper.getRandomNr(1000,6000)},
+                {"hours", helper.getRandomNr(10,120)},
                 {"positions", new BsonDocument {
                   {"name", helper.getPositionName()},
                   {"description", helper.getPositionDescription()},
-                  {"salary", helper.getSalary()},  
+                  {"salary", helper.getRandomNr(2000,6000)},  
                 }}
             };
 

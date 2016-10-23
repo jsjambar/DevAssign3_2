@@ -8,30 +8,15 @@ class Helpers{
         this.key = key;
     }
 
-    public int getProjectID()
-    {
-        return key.Next(1,100);
+    public int getRandomNr(int min, int max){
+        return key.Next(min,max);
     }
+
     public string getProjectName()
     {
         List<string> data = new List<string>(new string[]{"A", "B", "C", "D", "E", "F", "G"});
         int index = key.Next(data.Count);
         return data[index];
-    }
-
-    public int getBudget()
-    {
-        return key.Next(1000, 6000);
-    }
-
-    public int getHours()
-    {
-        return key.Next(10, 120);
-    }
-
-    public int getStreetNr()
-    {
-        return key.Next(1, 30);
     }
 
     public string getStreet()
@@ -43,7 +28,7 @@ class Helpers{
 
     public string getPC()
     {
-        List<string> data = new List<string>(new string[]{"PC A", "PC B", "PC C", "PC D", "PC E", "PC F", "PC G"});
+        List<string> data = new List<string>(new string[]{"3022AA", "1234AB", "9320AC", "1238AD", "1292AA", "9872QW", "3022XD"});
         int index = key.Next(data.Count);
         return data[index];
     }
@@ -67,16 +52,6 @@ class Helpers{
         List<string> data = new List<string>(new string[]{"Building 1", "Building 2", "Building 3", "Building 4", "Building 5", "Building 6", "Building 7" });
         int index = key.Next(data.Count);
         return data[index];
-    }
-
-    public int getRooms()
-    {
-        return key.Next(1, 10);
-    }
-
-    public int getRent()
-    {
-        return key.Next(1, 1000);
     }
 
     public string getFirstName()
@@ -126,11 +101,6 @@ class Helpers{
         List<string> data = new List<string>(new string[]{"Doet iets", "Doet niks", "Doet een beetje", "Doet heel veel", "Ja nee", "Nee beter he", "Nee."});
         int index = key.Next(data.Count);
         return data[index];
-    }
-
-    public int getSalary()
-    {
-        return key.Next(50, 200);
     }
 
 }
