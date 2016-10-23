@@ -8,6 +8,10 @@ class Helpers{
         this.key = key;
     }
 
+    public int getProjectID()
+    {
+        return key.Next(1,100);
+    }
     public string getProjectName()
     {
         List<string> data = new List<string>(new string[]{"A", "B", "C", "D", "E", "F", "G"});

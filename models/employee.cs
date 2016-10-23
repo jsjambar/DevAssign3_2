@@ -9,5 +9,6 @@ public class Employee
    public BsonDocument positions { get; set; }
    public BsonDocument degrees { get; set; }
    public BsonDocument headquarter { get; set; }
+   public BsonDocument projects { get; set; }
 
 }

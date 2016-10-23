@@ -50,6 +50,17 @@ class Employees
                 {"rooms", helper.getRooms()},
                 {"rent", helper.getRent()}
             };
+            newEmployee.projects = new BsonDocument
+            {
+                {"proj_id", helper.getProjectID()},
+                {"budget", helper.getBudget()},
+                {"hours", helper.getHours()},
+                {"positions", new BsonDocument {
+                  {"name", helper.getPositionName()},
+                  {"description", helper.getPositionDescription()},
+                  {"salary", helper.getSalary()},  
+                }}
+            };
 
             counter++;
             db.insertEmployee(newEmployee);
